@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="youtubeAPI"></script>
+		<script src="youtubeAPI.js"></script>
+		<script src="http://www.youtube.com/player_api"></script>
+		<link rel="stylesheet" href="styles.css">
 		<title>MadCat Pages</title>
 	</head>
-	<body>eep</body>
+	<body>
+		<div>
+			<h2>Youtube Playlist Shuffle</h2>
+			<h3>Playlist URL:</h3>
+			<input name="urlInput" id="urlInput" class="urlInput">
+			<h3>Sort Type:</h3>
+			<div class="labelContainer">
+				<input type="radio" class="sortRadioButtons" name="sortType" id="trueRandom" value="trueRandom" checked>
+				<label for="trueRandom" class="sortRadioButtonLabels">True Random</label>
+				<input type="radio" class="sortRadioButtons" name="sortType" id="smartRandom" value="smartRandom">
+				<label for="smartRandom" class="sortRadioButtonLabels">Smart Random</label>
+				<input type="radio" class="sortRadioButtons" name="sortType" id="loop" value="loop">
+				<label for="loop" class="sortRadioButtonLabels">Loop</label>
+			</div>
+			<button name="goButton" class="goButton" onclick="ExecuteSearch()">Go</button>
+		</div>
+		<div id="player" class="player"></div>
+	</body>
 </html>

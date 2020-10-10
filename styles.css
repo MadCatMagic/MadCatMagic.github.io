@@ -1,0 +1,103 @@
+@font-face { font-family: opensans; src: url('Resources/OpenSans-Regular.ttf');}
+
+body {
+	background-color: #222222;
+}
+
+h2 {
+	font-family: opensans;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	margin: 10px;
+}
+
+h3 {
+	font-family: opensans;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	margin: 7px;
+}
+
+.urlInput {
+	font-family: opensans;
+	background-color: #171717;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+
+    position: relative;
+	width: 60%;
+	bottom : 10%;
+	left : 20%;
+
+	border: 5px;
+	border-radius: 5px;
+
+	padding: 2px 0px;
+}
+
+.sortRadioButtons {
+    position: relative;
+	width: 50%;
+	bottom : 5%;
+	left : 20%;
+}
+
+.sortRadioButtonLabels {
+	font-family: opensans;
+	color: #ffffff;
+	position: relative;
+	width: 0%;
+	bottom : 0%;
+	left : -4%;
+}
+
+.goButton {
+	background-color: #017fa8;
+
+	font-family: opensans;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 0px;
+
+	outline-style: none;
+	border: 5px;
+	border-radius: 5px;
+
+	cursor: pointer;
+
+	position: fixed;
+	width: 40%;
+	bottom : 10%;
+	left : 30%;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+}
+
+.goButton:hover {
+  	background-color: #008fbe;
+}
+.goButton:active {
+  	background-color: #006687;
+}
+
+.player {
+	position: fixed;
+	width: 50%;
+	bottom : 30%;
+	left : 25%;
+}
