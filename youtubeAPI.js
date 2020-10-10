@@ -86,7 +86,6 @@ function SortVideoArray(sortType) {
 			sortedVideoArray[i] = videoArray[i].snippet.resourceId.videoId;
 		}
 	}
-	console.log(sortedVideoArray);
 }
 
 function Shuffle(array) {
