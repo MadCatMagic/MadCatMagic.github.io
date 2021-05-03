@@ -45,6 +45,29 @@ const ExecuteSearch = async _ => {
 	PlayNextVideo();
 }
 
+
+const LazyButton = async _ => {
+	currentVideoId = -1;
+	sortedVideoArray = [];
+	// get video arrary
+	let url = "https://www.youtube.com/playlist?list=PLwzC3TMmB8NzBZro5BImoidfGCe_oJYMj";
+	url = url.split("list=").pop();
+	videoArray = await GetPlaylist(url);
+
+	// sort video array using sort type
+	let trueRandom = document.getElementById("trueRandom").checked;
+	let smartRandom = document.getElementById("smartRandom").checked;
+	let loop = document.getElementById("loop").checked;
+	if (trueRandom) {
+		SortVideoArray("trueRandom");
+	} else if (smartRandom) {
+		SortVideoArray("smartRandom");
+	} else {
+		SortVideoArray("loop");
+	}
+	PlayNextVideo();
+}
+
 var player = null;
 function PlayNextVideo() {
 	currentVideoId++;

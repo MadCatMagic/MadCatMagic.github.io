@@ -95,6 +95,47 @@ h3 {
   	background-color: #006687;
 }
 
+.lazyButton {
+	background-color: #017fa8;
+
+	font-family: opensans;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	padding: 5px 0px;
+
+	outline-style: none;
+	border: 5px;
+	border-radius: 5px;
+
+	cursor: pointer;
+
+	position: fixed;
+	width: 15%;
+	bottom : 4%;
+	left : 42.5%;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+}
+
+.lazyButton:hover {
+  	background-color: #008fbe;
+}
+.lazyButton:active {
+  	background-color: #006687;
+}
+
 .player {
 	position: fixed;
 	width: 50%;
