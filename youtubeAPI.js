@@ -5,7 +5,7 @@ const GetPlaylist = async id => {
 	let videosCollected = 0;
 	let playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=49&playlistId=${id}&key=${YOUTUBE_API_KEY}`;
 	let finishedCollectingPlaylistData = false;
-	for (let i = 0; i < 5 && !finishedCollectingPlaylistData; i++) {
+	for (let i = 0; i < 50 && !finishedCollectingPlaylistData; i++) {
 		await fetch(playlistUrl).then(response => response.json()).then(data => {
 			// actual fetching of data
 			videoArray = videoArray.concat(data.items);
